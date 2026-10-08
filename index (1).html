@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>OBJET — Technology, quietly considered</title>
+  <meta name="description" content="OBJET is a curated store for considered technology: audio, wearables, workspace and photo objects chosen for longevity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF9F5'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='22' text-anchor='middle' fill='%23141412'%3EO%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="home">
+
+  <!-- ── Announcement marquee ─────────────────────────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marqueeTrack">
+      <span>Complimentary shipping over $150</span><i>·</i>
+      <span>30-day quiet returns</span><i>·</i>
+      <span>Two-year warranty on every object</span><i>·</i>
+      <span>Carbon-neutral delivery</span><i>·</i>
+    </div>
+  </div>
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="header" id="header">
+    <nav class="header__nav" aria-label="Primary">
+      <a href="#shop">Shop</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#journal">Journal</a>
+    </nav>
+    <a class="header__wordmark" href="index%20(1).html" aria-label="OBJET home">Objet<span>.</span></a>
+    <div class="header__actions">
+      <button class="header__cart" id="cartOpen" type="button" aria-label="Open cart">
+        Cart&nbsp;<span class="header__cart-count" id="cartCount">(0)</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ── Hero ───────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero__text reveal">
+        <p class="eyebrow">Est. 2026 — Objects of utility</p>
+        <h1 class="hero__title">Technology,<br><em>quietly</em> considered.</h1>
+        <p class="hero__lede">A small catalogue of instruments for listening, working and seeing — chosen for how they age, not how they launch.</p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="#shop">Shop the collection</a>
+          <a class="btn btn--text" href="#philosophy">Our philosophy&nbsp;→</a>
+        </div>
+      </div>
+      <figure class="hero__media reveal">
+        <img src="assets/hero.jpg" alt="Still life of OBJET objects — headphones, speaker and watch on ivory plinths" width="1536" height="1024">
+        <figcaption class="hero__caption">N°01 — The Listening Set, arranged in the studio</figcaption>
+      </figure>
+    </section>
+
+    <!-- ── Values strip ───────────────────────────────────── -->
+    <section class="values" aria-label="Store promises">
+      <div class="values__item reveal"><span class="values__no">01</span><p>Ships worldwide, carbon-neutral</p></div>
+      <div class="values__item reveal"><span class="values__no">02</span><p>Two-year warranty, repair-first</p></div>
+      <div class="values__item reveal"><span class="values__no">03</span><p>30 days to change your mind</p></div>
+      <div class="values__item reveal"><span class="values__no">04</span><p>Packaging without plastic</p></div>
+    </section>
+
+    <!-- ── Collection ─────────────────────────────────────── -->
+    <section class="shop" id="shop">
+      <div class="shop__head reveal">
+        <h2 class="section-title">The Collection <sup class="section-title__count" id="productCount">(08)</sup></h2>
+        <div class="shop__filters" role="tablist" aria-label="Filter products">
+          <button class="chip is-active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="audio" type="button">Audio</button>
+          <button class="chip" data-filter="wearables" type="button">Wearables</button>
+          <button class="chip" data-filter="workspace" type="button">Workspace</button>
+          <button class="chip" data-filter="photo" type="button">Photo</button>
+        </div>
+      </div>
+      <div class="grid" id="productGrid" aria-live="polite"><!-- rendered by script.js --></div>
+    </section>
+
+    <!-- ── Philosophy statement ───────────────────────────── -->
+    <section class="statement" id="philosophy">
+      <p class="eyebrow reveal">Our philosophy</p>
+      <h2 class="statement__line reveal">Fewer objects.<br><em>Better ones.</em></h2>
+      <p class="statement__note reveal">We stock eight things. Each earned its place by outlasting the alternatives — in build, in battery, in the patience of its design. When something better exists, we replace it. Until then, we say no.</p>
+      <span class="statement__sig reveal">— The OBJET buying desk</span>
+    </section>
+
+    <!-- ── Journal teaser ─────────────────────────────────── -->
+    <section class="journal" id="journal">
+      <h2 class="section-title reveal">Field Notes <sup class="section-title__count">(03)</sup></h2>
+      <div class="journal__list">
+        <a class="journal__row reveal" href="#" onclick="return false">
+          <span class="journal__no">FN—014</span>
+          <span class="journal__name">Why we test headphones for 400 hours before listing</span>
+          <span class="journal__meta">Process · 6 min</span>
+        </a>
+        <a class="journal__row reveal" href="#" onclick="return false">
+          <span class="journal__no">FN—013</span>
+          <span class="journal__name">The case against yearly upgrades</span>
+          <span class="journal__meta">Essay · 4 min</span>
+        </a>
+        <a class="journal__row reveal" href="#" onclick="return false">
+          <span class="journal__no">FN—012</span>
+          <span class="journal__name">Brass, fabric, anodized black: a materials index</span>
+          <span class="journal__meta">Materials · 8 min</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Newsletter ─────────────────────────────────────── -->
+    <section class="newsletter">
+      <div class="newsletter__inner reveal">
+        <h2 class="newsletter__title">The Quiet List</h2>
+        <p class="newsletter__sub">One letter a month. New objects, restocks, nothing else.</p>
+        <form class="newsletter__form" id="newsletterForm" novalidate>
+          <label class="visually-hidden" for="newsletterEmail">Email address</label>
+          <input type="email" id="newsletterEmail" placeholder="YOUR EMAIL" autocomplete="email" required>
+          <button type="submit" aria-label="Subscribe">→</button>
+        </form>
+        <p class="newsletter__ok" id="newsletterOk" hidden>Thank you — you are on the list.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="footer__wordmark">Objet<span>.</span></span>
+      <p class="footer__tag">Objects of utility, chosen with care.<br>Studio &amp; showroom — 14 Rue de Sévigné, Paris.</p>
+    </div>
+    <nav class="footer__col" aria-label="Shop links">
+      <h3>Shop</h3>
+      <a href="#shop">Audio</a><a href="#shop">Wearables</a><a href="#shop">Workspace</a><a href="#shop">Photo</a>
+    </nav>
+    <nav class="footer__col" aria-label="Company links">
+      <h3>Company</h3>
+      <a href="#philosophy">Philosophy</a><a href="#journal">Journal</a><a href="#" onclick="return false">Showroom</a>
+    </nav>
+    <nav class="footer__col" aria-label="Support links">
+      <h3>Support</h3>
+      <a href="#" onclick="return false">Shipping</a><a href="#" onclick="return false">Returns</a><a href="#" onclick="return false">Repairs</a><a href="#" onclick="return false">Contact</a>
+    </nav>
+    <div class="footer__base">
+      <span>© 2026 OBJET Studio</span>
+      <span>Designed for longevity</span>
+    </div>
+  </footer>
+
+  <!-- ── Cart drawer ──────────────────────────────────────── -->
+  <div class="backdrop" id="backdrop" hidden></div>
+  <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart" hidden>
+    <header class="drawer__head">
+      <h2>Cart <span id="drawerCount">(0)</span></h2>
+      <button class="drawer__close" id="cartClose" type="button" aria-label="Close cart">✕</button>
+    </header>
+    <div class="drawer__ship" id="shipBar">
+      <p id="shipMsg">$150 away from complimentary shipping</p>
+      <div class="drawer__ship-track"><div class="drawer__ship-fill" id="shipFill"></div></div>
+    </div>
+    <div class="drawer__items" id="cartItems"><!-- rendered by script.js --></div>
+    <footer class="drawer__foot" id="drawerFoot">
+      <div class="drawer__row"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+      <p class="drawer__hint">Shipping &amp; taxes calculated at checkout</p>
+      <button class="btn btn--solid btn--full" id="checkoutBtn" type="button">Checkout</button>
+    </footer>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

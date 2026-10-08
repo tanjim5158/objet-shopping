@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>OBJET — Product</title>
+  <meta name="description" content="A considered object from the OBJET collection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF9F5'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='22' text-anchor='middle' fill='%23141412'%3EO%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="product">
+
+  <!-- ── Announcement marquee ─────────────────────────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marqueeTrack">
+      <span>Complimentary shipping over $150</span><i>·</i>
+      <span>30-day quiet returns</span><i>·</i>
+      <span>Two-year warranty on every object</span><i>·</i>
+      <span>Carbon-neutral delivery</span><i>·</i>
+    </div>
+  </div>
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="header" id="header">
+    <nav class="header__nav" aria-label="Primary">
+      <a href="index%20(1).html#shop">Shop</a>
+      <a href="index%20(1).html#philosophy">Philosophy</a>
+      <a href="index%20(1).html#journal">Journal</a>
+    </nav>
+    <a class="header__wordmark" href="index%20(1).html" aria-label="OBJET home">Objet<span>.</span></a>
+    <div class="header__actions">
+      <button class="header__cart" id="cartOpen" type="button" aria-label="Open cart">
+        Cart&nbsp;<span class="header__cart-count" id="cartCount">(0)</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ── Product detail (rendered by script.js) ─────────── -->
+    <section class="pdp" id="pdpRoot" aria-live="polite"></section>
+
+    <!-- ── Related objects ────────────────────────────────── -->
+    <section class="shop shop--related">
+      <div class="shop__head">
+        <h2 class="section-title">Also Considered <sup class="section-title__count" id="relatedCount">(03)</sup></h2>
+      </div>
+      <div class="grid grid--related" id="relatedGrid"></div>
+    </section>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="footer__wordmark">Objet<span>.</span></span>
+      <p class="footer__tag">Objects of utility, chosen with care.<br>Studio &amp; showroom — 14 Rue de Sévigné, Paris.</p>
+    </div>
+    <nav class="footer__col" aria-label="Shop links">
+      <h3>Shop</h3>
+      <a href="index%20(1).html#shop">Audio</a><a href="index%20(1).html#shop">Wearables</a><a href="index%20(1).html#shop">Workspace</a><a href="index%20(1).html#shop">Photo</a>
+    </nav>
+    <nav class="footer__col" aria-label="Company links">
+      <h3>Company</h3>
+      <a href="index%20(1).html#philosophy">Philosophy</a><a href="index%20(1).html#journal">Journal</a><a href="#" onclick="return false">Showroom</a>
+    </nav>
+    <nav class="footer__col" aria-label="Support links">
+      <h3>Support</h3>
+      <a href="#" onclick="return false">Shipping</a><a href="#" onclick="return false">Returns</a><a href="#" onclick="return false">Repairs</a><a href="#" onclick="return false">Contact</a>
+    </nav>
+    <div class="footer__base">
+      <span>© 2026 OBJET Studio</span>
+      <span>Designed for longevity</span>
+    </div>
+  </footer>
+
+  <!-- ── Cart drawer ──────────────────────────────────────── -->
+  <div class="backdrop" id="backdrop" hidden></div>
+  <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart" hidden>
+    <header class="drawer__head">
+      <h2>Cart <span id="drawerCount">(0)</span></h2>
+      <button class="drawer__close" id="cartClose" type="button" aria-label="Close cart">✕</button>
+    </header>
+    <div class="drawer__ship" id="shipBar">
+      <p id="shipMsg">$150 away from complimentary shipping</p>
+      <div class="drawer__ship-track"><div class="drawer__ship-fill" id="shipFill"></div></div>
+    </div>
+    <div class="drawer__items" id="cartItems"></div>
+    <footer class="drawer__foot" id="drawerFoot">
+      <div class="drawer__row"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+      <p class="drawer__hint">Shipping &amp; taxes calculated at checkout</p>
+      <button class="btn btn--solid btn--full" id="checkoutBtn" type="button">Checkout</button>
+    </footer>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
